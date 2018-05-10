@@ -1,4 +1,4 @@
-# technical_interview_questions
+# Technical_interview_questions
 For this project, you will be given five technical interviewing questions on a variety of topics discussed in the technical 
 interviewing course.
 
