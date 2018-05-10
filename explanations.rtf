@@ -1,0 +1,133 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red27\green31\blue34;\red27\green31\blue34;}
+{\*\expandedcolortbl;;\cssrgb\c14118\c16078\c18039;\cssrgb\c14118\c16078\c18039;}
+\margl1440\margr1440\vieww33400\viewh21000\viewkind0
+\deftab720
+\pard\pardeftab720\sl340\partightenfactor0
+
+\f0\fs28 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Explonation Q_1:\
+\
+An anagram of a string is another string that contains same characters,\
+only the order of characters can be different. I pick two pairs of strings\
+and tested them in the code.\
+\
+I defined a function to return if the pairs are anagram. Th first thing\
+I need to do is removing the white spaces although I do not have such a \
+problem in my current entries but it is always a possibility.\
+\
+Next, I want to make an observation about the lenth of the strings. We can\
+not have an anagram with different lengths. So the code will immediately \
+return False for such an example.\
+\
+Another test I need to make is removing all possible lowercase/uppercase\
+contradictions eventhough I do not have some. \
+\
+Then I want to solve the problem using a hash table: I created a string\
+variable that is all the letters of the alphabet and then I construct a  \
+dictionary, an image in front of keys that are the list of alphabet as you \
+can see. I set the respective values for each key to be 0 where this will be\
+a count to tell us how many times we have run into a character in s_i and\
+t_i, where i is the address of the strings. When we call the list of strings \
+what it does, it thakes the string and divide it into individual characters\
+where each of the characters are a component in the list. \
+\
+In the for loop, I am basically incrementing the counter a running tally of\
+all the letters in the string that we are focusing on.  Let's say \
+"s_1[1 \'b7\'b7\'b7 n]=udacity, n \uc0\u8805  1"is the string and the first iteration of the loop \
+is hitting to "u" and "u" show up in the first dictionary, so "u" corresponds \
+to a key in the dictionary and then increment the value of the key by 1. And \
+then keep going, we apply the same process for the next letter "d" and so on.\
+Thus, I return the the loop to see if the first dictionary is equal to the \
+second one and it can tell us they are anagrams. \
+\
+Lastly, I printed out the results for the given samples.\
+\
+The time complexity depends on the length of the string, so I woudld say O(len(string)). And the space complexity is \
+O(1) since we are storing only s and t. \
+\
+\
+\
+\
+Explonation Q_2:\
+\
+L(i, j): length of longest palindromic subsequence of s=S[i\'b7\'b7\'b7 j] for i \uc0\u8804  j.\
+First, we define the function "is_palindrome" to check if the string is a palindrome. Then we convert the entire string i\cf3 \outl0\strokewidth0 nto in lowercase.\cf2 \outl0\strokewidth0 \strokec2  \
+As a final step, we get rid of all white spaces and then we returned "s" is equal to the reverse backward of "s". \
+\
+Secondly, we defined the function question2 whose input is a string and the output is the longest palindromic substring.\
+If the input is not string then the code returns None.If the length of the string is from zero to two then it returns the string \
+as the LPS. Otherwise, it iterates the string and obtain the LPS.\
+\
+Since we have a nested loop, the time complexity is O(n^2), and space complexity is only O(1) because we only store the\
+longest palindromic substring. \
+\
+\
+\
+\
+\
+Explonation Q_3:\
+    \
+The problem has the same logic with coin exchange algorithm. \
+    \
+The "heapq" module provides an implementation of the heap queue algorithm, also known as the priority queue algorithm.\
+Heaps are binary trees for which every parent node has a value less than or equal to any of its children.\
+\
+This implementation uses arrays for which heap[k] <= heap[2*k+1] and heap[k] <= heap[2*k+2] for all k, counting\
+elements from zero. For the sake of comparison, non-existing elements are considered to be infinite. The smallest \
+element is always the root, heap[0].\
+\
+"heapq.heappush(heap, item)": Push the value item onto the heap, maintaining the heap invariant.\
+    \
+"heapq.heappop(heap)":Pop and return the smallest item from the heap, maintaining the heap invariant. If the heap is \
+empty, IndexError is raised. To access the smallest item without popping it, use heap[0].\
+\
+The function "question3(G)" takes "G" as an input and returns the minimum spanning tree as an output.\
+\
+Time efficiency is O(nlogn)if n= the number of edges.\
+Space efficiency is O(n) we hold the list of the edges to generate the minimum spanning tree. \
+\
+\
+\
+\
+\
+\
+\
+Explonation Q_4: \
+    \
+We defined the "parent_node" function that returns the parent "n" if it exists, or else returns "-1".\
+\
+Then we defined the function "question4" to find the least common ancestor (LCA). I tried to create a list of ancestors \
+for the first node and append them in the list. And then, searched if the second node has any ancestors in that list. \
+\
+For time efficiency, assume that we must visit one node at each level, then the time will be proportional to the height of \
+the tree. So I will say O(log(n)).\
+\
+For the space efficiency, assuming that we must store the ancestors to the list, I will say O(n).\
+\
+\
+\
+\
+\
+Explonation Q_5:\
+\
+First, as been provided to us, we implemented the data structure of node class contains two elements. \
+\
+The next data structure is the linked list class which basically enfolds the previous nodes. In the constructor, we\
+always want to have the head node present in the linked list as a placeholder to allow us to indicate the first element\
+in the list. \
+\
+The first function that I want to create is the append function in the list object that will add new data point to the \
+end of the list. We iterate over each one of the nodes in the list starting with the head. And then once we arrive to \
+the next node of the present node is none we know that it will be the last node in the list. \
+\
+Now we are ready to define the function "question5(ll, m)". First we need to know if the variables linked list and m \
+equal to None, other wise we will keep going. Then identify the linked list as avariable. Once we set a counter index \
+from the head to m the function returns the current value as the "m-th" element from the end.\
+\
+Time efficiency seems like O(n) since the function iterates the singly linked list. \
+\
+Space efficiency is like O(1) since we need to store just the current node and the counter index at a given time.\
+\
+}
