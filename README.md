@@ -22,6 +22,7 @@ We wrote up an explanation for each question in a single separate text file (cal
 not be a detailed walkthrough of the code we provided, but provide our reasoning behind decisions made in the code. For 
 example, why did we use that data structure? We also need to explain the efficiency (time and space) of our solution.
 
+
 ## Execution
 
 You need to have Python 3.x software in your device to execute the code(s). You may installa it from the website 
@@ -31,6 +32,7 @@ https://www.python.org/downloads/
 or if you prefer to use anaconda environment:
 
 https://www.anaconda.com/download/
+
 
 ## Acknowledgments
 
